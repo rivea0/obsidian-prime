@@ -1,0 +1,816 @@
+/* ------------------------------------------------------- */
+/* ------------------------ Prime ------------------------ */
+/* -------------- Theme for Obsidian by Eda -------------- */
+/* ------------------------------------------------------- */
+
+/* -------------------------------------------------------
+
+GPLv3 License
+
+you can buy me a coffee to support my work: 
+https://buymeacoffee.com/rivea0
+
+---------------------------------------------------------- */
+
+
+/* @settings
+
+name: Prime
+id: prime
+settings:
+    - 
+        id: icon-color
+        title: Icon color
+        description: Change the color of icons
+        type: class-select
+        allowEmpty: false
+        default: icon-default
+        options:
+            - 
+                label: Default
+                value: icon-default
+            - 
+                label: Purple
+                value: icon-purple
+            - 
+                label: Yellow
+                value: icon-yellow
+            - 
+                label: Pink
+                value: icon-pink
+            - 
+                label: Green
+                value: icon-green
+            - 
+                label: Orange
+                value: icon-orange
+            - 
+                label: Blue
+                value: icon-blue
+    -
+        id: heading-no-color
+        title: Remove color in headings
+        description: Make each heading the same color
+        type: class-toggle
+        default: false
+    -
+        id: hide-header-title
+        title: Hide header title
+        type: class-toggle
+        default: false
+    -
+        id: hide-status-bar
+        title: Hide status bar
+        type: class-toggle
+        default: false
+    -
+        id: highlight-active-line
+        title: Highlight active line
+        type: class-toggle
+        default: false
+    -
+        id: syntax-highlighting-header
+        title: Syntax Highlighting Options
+        description: Choose a syntax highlighting theme for code blocks
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: syntax-highlight-theme-dark
+        title: Dark Theme
+        description: Select syntax highlighting for dark theme
+        type: class-select
+        allowEmpty: false
+        default: dracula
+        options:
+            - 
+                label: Dracula
+                value: dracula
+            - 
+                label: One Dark
+                value: one-dark-dark
+            - 
+                label: Catppuccin Frappé
+                value: catppuccin-frappe-for-dark
+            - 
+                label: Catppuccin Macchiato
+                value: catppuccin-macchiato
+            - 
+                label: Catppuccin Mocha
+                value: catppuccin-mocha
+            - 
+                label: Halcyon
+                value: halcyon
+            - 
+                label: GitHub Dark
+                value: github-dark
+            - 
+                label: Tokyo Night
+                value: tokyo-night
+    -
+        id: syntax-highlight-theme-light
+        title: Light Theme
+        description: Select syntax highlighting for light theme
+        type: class-select
+        allowEmpty: false
+        default: material-lighter
+        options:
+            - 
+                label: Material Lighter
+                value: material-lighter
+            - 
+                label: One Dark (Light)
+                value: one-dark-light
+            - 
+                label: Catppuccin Frappé
+                value: catppuccin-frappe-for-light
+            - 
+                label: Catppuccin Latte
+                value: catppuccin-latte
+            - 
+                label: GitHub Light
+                value: github-light
+            - 
+                label: Tokyo Night Light
+                value: tokyo-night-light
+    -
+      id: callout-emojis-heading
+      title: Callouts with Emoji Support ✨
+      type: heading
+      level: 1
+    -
+      id: callout-emojis
+      description: You can download the [Callout Emojis snippet](https://github.com/rivea0/obsidian-prime-snippets/blob/main/callout-emojis.css) to add emojis as icons to your callouts.
+      type: info-text
+      level: 1
+      markdown: true
+    -
+      id: gradient-frames-heading
+      title: Gradient Frames ✨
+      type: heading
+      level: 1
+    -
+      id: gradient-frames
+      description: You can download the [Gradient Frames snippet](https://github.com/rivea0/obsidian-prime-snippets/blob/main/gradient-frames.css) to add gradient colors to your Obsidian window.
+      type: info-text
+      level: 1
+      markdown: true
+*/
+
+body {
+	--link-decoration: none;
+	--link-decoration-hover: underline;
+	--link-external-decoration: none;
+	--link-external-decoration-hover: underline;
+	--cursor: pointer;
+
+	/*----- Syntax highlighting for code blocks -----*/
+
+	/********** Dark theme **********/
+
+  /* Dracula */
+	--color-dracula-background: #19212d;
+  --color-dracula-foreground: #f8f8f2;
+  --color-dracula-comment: #6272a4;
+  --color-dracula-cyan: #8be9fd;
+  --color-dracula-green: #50fa7b;
+  --color-dracula-orange: #ffb86c;
+  --color-dracula-pink: #ff79c6;
+  --color-dracula-purple: #bd93f9;
+  --color-dracula-red: #ff5555;
+  --color-dracula-yellow: #f1fa8c;
+
+  /* One Dark */
+	--color-dark-one-dark-background: #282c34;
+  --color-dark-one-dark-gray-1: #5c6370;
+  --color-dark-one-dark-gray-2: #abb2bf;
+  --color-dark-one-dark-red: #e06c75;
+  --color-dark-one-dark-orange: #d19a66;
+  --color-dark-one-dark-green: #98c379;
+  --color-dark-one-dark-aqua: #56b6c2;
+  --color-dark-one-dark-purple: #c678dd;
+  --color-dark-one-dark-blue: #61afef;
+  --color-dark-one-dark-yellow: #e5c07b;
+
+  /* Catppuccin Frappé */
+  --color-ctp-frappe-background: #303446;
+  --color-ctp-frappe-foreground: #c6d0f5;
+  --color-ctp-frappe-faint: #949cbb;
+  --color-ctp-frappe-muted: #838ba7;
+  --color-ctp-frappe-yellow: #e5c890;
+  --color-ctp-frappe-orange: #ef9f76;
+  --color-ctp-frappe-pink: #f4b8e4;
+  --color-ctp-frappe-cyan: #81c8be;
+  --color-ctp-frappe-green: #a6d189;
+  --color-ctp-frappe-red: #e78284;
+  --color-ctp-frappe-purple: #ca9ee6;
+
+  /* Catppuccin Macchiato */
+  --color-ctp-macchiato-background: #24273a;
+  --color-ctp-macchiato-foreground: #cad3f5;
+  --color-ctp-macchiato-faint: #8087a2;
+  --color-ctp-macchiato-muted: #939ab7;
+  --color-ctp-macchiato-yellow: #eed49f;
+  --color-ctp-macchiato-orange: #f5a97f;
+  --color-ctp-macchiato-pink: #f5bde6;
+  --color-ctp-macchiato-cyan: #8bd5ca;
+  --color-ctp-macchiato-green: #a6da95;
+  --color-ctp-macchiato-red: #ed8796;
+  --color-ctp-macchiato-purple: #c6a0f6;
+
+  /* Catppuccin Mocha */
+  --color-ctp-mocha-background: #1e1e2e;
+  --color-ctp-mocha-foreground: #cdd6f4;
+  --color-ctp-mocha-faint: #7f849c;
+  --color-ctp-mocha-muted: #9399b2;
+  --color-ctp-mocha-yellow: #f9e2af;
+  --color-ctp-mocha-orange: #fab387;
+  --color-ctp-mocha-pink: #f5c2e7;
+  --color-ctp-mocha-cyan: #94e2d5;
+  --color-ctp-mocha-green: #a6e3a1;
+  --color-ctp-mocha-red: #f38ba8;
+  --color-ctp-mocha-purple: #cba6f7;
+
+  /* Halcyon */
+  --color-halcyon-background: #171c28;
+  --color-halcyon-cyan: #5ccfe6;
+  --color-halcyon-yellow: #ffd580;
+  --color-halcyon-red: #ef6b73;
+  --color-halcyon-purple: #c3a6ff;
+  --color-halcyon-orange: #ffae57;
+  --color-halcyon-green: #bae67e;
+  --color-halcyon-grey-dark: #6679a4;
+
+  /* GitHub Dark */
+  --color-github-dark-background: #161b22;
+  --color-github-dark-red: #f47067;
+  --color-github-dark-green: #7ee787;
+  --color-github-dark-orange: #ffa657;
+  --color-github-dark-yellow: #d29922;
+  --color-github-dark-cyan: #a5d6ff;
+  --color-github-dark-blue: #6cb6ff;
+  --color-github-dark-purple: #d2a8ff;
+  --color-github-dark-pink: #f778ba;
+
+  /* Tokyo Night */
+  --color-tokyo-night-background: #1a1b26;
+  --color-tokyo-night-foreground: #a9b1d6;
+  --color-tokyo-night-faint: #51597d;
+  --color-tokyo-night-yellow: #e0af68;
+  --color-tokyo-night-orange: #ff9e64;
+  --color-tokyo-night-red: #f7768e;
+  --color-tokyo-night-cyan: #7dcfff;
+  --color-tokyo-night-green: #9ece6a;
+  --color-tokyo-night-purple: #9d7cd8;
+
+
+	/********** Light theme **********/
+
+  /* Material Lighter */
+	--color-material-background: #f5f7fa;
+	--color-material-selection: #5c5f77;
+	--color-material-foreground: #4c4f69;
+	--color-material-comment: #6c6f85;
+	--color-material-cyan: #179299; 
+	--color-material-green: #40a02b;
+	--color-material-orange: #df8e1d;
+	--color-material-pink: #ea76cb;
+	--color-material-purple: #7287fd;
+	--color-material-red: #e64553;
+	--color-material-yellow: #dc8a78;  
+
+  /* One Dark (Light) */
+  --color-light-one-dark-background: #f0f1f3;
+  --color-light-one-dark-gray-1: #383a42;
+  --color-light-one-dark-gray-2: #383a42;
+  --color-light-one-dark-red: #e75545;
+  --color-light-one-dark-green: #4ea24c;
+  --color-light-one-dark-blue: #3d74f6;
+  --color-light-one-dark-purple: #a625a4;
+  --color-light-one-dark-aqua: #0084bc;
+  --color-light-one-dark-yellow: #e35649;
+  --color-light-one-dark-orange: #986800;	
+
+  /* Catppuccin Latte */
+  --color-ctp-latte-background: #eff1f5;
+  --color-ctp-latte-foreground: #4c4f69;
+  --color-ctp-latte-faint: #8c8fa1;
+  --color-ctp-latte-muted: #7c7f93;
+  --color-ctp-latte-yellow: #df8e1d;
+  --color-ctp-latte-orange: #fe640b;
+  --color-ctp-latte-pink: #ea76cb;
+  --color-ctp-latte-cyan: #179299;
+  --color-ctp-latte-green: #40a02b;
+  --color-ctp-latte-red: #d20f39;
+  --color-ctp-latte-purple: #8839ef;
+  
+  /* GitHub Light */
+  --color-github-light-background: #f6f8fa;
+  --color-github-light-red: #cf222e;
+  --color-github-light-green: #0cb54f;
+  --color-github-light-orange: #d96c00;
+  --color-github-light-yellow: #bd8e37;
+  --color-github-light-cyan: #2db7b5;
+  --color-github-light-blue: #086ddd;
+  --color-github-light-purple: #876be0;
+  --color-github-light-pink: #c32b74;
+
+  /* Tokyo Night Light */
+  --color-tokyo-night-light-background: #d5d6db;
+  --color-tokyo-night-light-foreground: #343b59;
+  --color-tokyo-night-light-faint: #9699a3;
+  --color-tokyo-night-light-yellow: #8f5e15;
+  --color-tokyo-night-light-orange: #965027;
+  --color-tokyo-night-light-red: #8c4351;
+  --color-tokyo-night-light-cyan: #166775;
+  --color-tokyo-night-light-green: #33635c;
+  --color-tokyo-night-light-purple: #41315f;
+
+	--background-primary: var(--color-base-00);
+	--background-primary-alt: var(--color-base-00);
+	--background-secondary:  var(--color-base-05);
+	--background-secondary-alt: var(--color-base-05);
+
+	--background-modifier-hover: var(--color-base-10);
+	--background-modifier-border-focus: var(--color-base-20);
+
+	--text-on-accent: var(--color-base-00);
+	--color-accent: var(--color-purple);
+	--interactive-normal: var(--color-base-20);
+	--interactive-accent: var(--color-purple) !important; 
+	--interactive-accent-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.95);
+	--text-accent-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.9); 
+
+	--h1-color: var(--color-purple);
+	--h2-color: var(--color-blue);
+	--h3-color: var(--color-green);
+	--h4-color: var(--color-yellow);
+	--h5-color: var(--color-orange);
+	--h6-color: var(--color-pink);
+
+	--text-selection: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.4);
+	--text-accent: var(--color-purple);
+
+	--ribbon-background: var(--color-base-00);
+	--tab-container-background: var(--color-base-00);
+	--titlebar-background-focused: var(--color-base-00);
+
+	--nav-item-color: var(--text-muted);
+	--nav-item-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.5);
+	--nav-item-background-active: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.5);
+	--nav-item-background-selected: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.5);
+	--nav-indetation-guide-color: var(--color-base-20);
+
+	--tab-divider-color: var(--background-secondary);
+	--tab-container-background: var(--color-base-10);
+	--tab-outline-color: var(--color-base-10);
+
+	--link-color-hover: var(--color-purple);
+	--link-external-color-hover: var(--color-purple);
+	--link-external-decoration: none;
+	--link-external-decoration-hover: underline;
+
+	--checkbox-marker-color: var(--color-green);
+	--checkbox-color: var(--color-base-25);
+	--checkbox-color-hover: var(--color-base-25);
+	--checklist-done-color: var(--text-faint);
+
+	--indentation-guide-width: 2px;
+	--indentation-guide-width-active: 2px;
+
+	--blockquote-border-thickness: 2px;
+	--blockquote-border-color: var(--color-orange);
+	--blockquote-font-style: italic;
+	--blockquote-color: var(--text-muted);
+
+	--list-spacing: 2px;
+	--list-marker-color: var(--color-base-70);
+	--list-bullet-border: 1px solid var(--color-base-05);
+	--list-marker-color-collapsed: var(--color-base-60);
+	--list-marker-color-hover: var(--color-purple);
+
+	--table-border-color: var(--text-muted);
+	--table-header-weight: 600;
+
+	--tag-radius: 18px;
+	--tag-color: var(--text-faint);
+
+	--metadata-label-background-hover: var(--color-base-20);
+	--metadata-property-background-active: var(--color-base-10);
+	--metadata-label-background-active: var(--color-base-10);
+
+	--scrollbar-bg: var(--color-base-00);
+	--scrollbar-active-thumb-bg: var(--color-base-00);
+	--scrollbar-thumb-bg: var(--color-base-00);
+}
+
+body.theme-dark {
+	--color-base-00: #0d1117;
+	--color-base-05: #131922;
+	--color-base-10: #19212d;
+	--color-base-20: #1f2938;
+	--color-base-25: #263142;
+	--color-base-30: #2c394d;
+	--color-base-35: #324158;
+	--color-base-40: #384963;
+	--color-base-50: #3e516e;
+	--color-base-60: #445979;
+	--color-base-70: #4a6184;
+	--color-base-100: #5d79a4;
+	--color-red: #ff4140;
+	--color-orange: #fac79e;
+	--color-yellow: #faf69c;
+	--color-green: #9cfac7;
+	--color-blue: #9cfaf6;
+	--color-purple: #9ca0fa;
+	--color-pink: #fa9ccf;
+	
+	--accent-h: 237.45;
+	--accent-s: 90%;
+	--accent-l: 75%;
+
+	--text-normal: #fafbfc;
+	--text-muted: #c0c0c0;
+	--text-faint: #aea8ba;
+
+	--highlight-background-color--normal: rgba(255, 213, 0, .01);
+  --highlight-background-color-underline: #f6c90e;
+  --highlight-background-color--active: rgba(250, 246, 156, .1);
+	--highlight-background-color--active-dark: rgb(238, 232, 169, .1);
+
+	--tab-background-active: var(--color-base-10);
+
+	--blockquote-background-color: var(--color-base-10);
+
+	--tag-background: rgba(156, 160, 250, .2);
+}
+
+body.theme-light {
+	--color-base-00: #f9fafc;
+	--color-base-05: #eff1f5;
+	--color-base-10: #e5e8ee;
+	--color-base-20: #dadfe8;
+	--color-base-25: #d0d6e1;
+	--color-base-30: #c5ccdB;
+	--color-base-40: #bbc3d4;
+	--color-base-50: #b0bace;
+	--color-base-60: #a6b1c7;
+	--color-base-70: #9ba8c1;
+  --color-red: #f6535a;
+	--color-orange: #f37c1d;
+	--color-yellow: #c0b90a;
+	--color-green: #0bd065;
+	--color-blue: #0bd0c8;
+	--color-purple: #8c90f9;
+	--color-pink: #fa9ccf;
+
+	--accent-h: 237.45;
+	--accent-s: 90%;
+	--accent-l: 80%;
+
+	--text-normal: #0d1117;
+	--text-muted: #747474;
+	--text-faint: #8d8d8d;
+
+	--highlight-background-color--normal: rgba(255, 213, 0, .15);
+  --highlight-background-color-underline: #ffd500;
+  --highlight-background-color--active: rgba(250, 246, 156, .2);
+	--highlight-background-color--active-dark: rgb(238, 232, 169, .1);
+
+	--tab-background-active: var(--color-base-05);
+
+	--blockquote-background-color: var(--color-base-05);
+
+	--tag-background: var(--color-base-10);
+}
+
+
+.nav-files-container.node-insert-event, 
+.nav-buttons-container {
+	background-color: var(--background-primary);
+}
+
+.workspace-tab-header-container,
+.nav-header {
+	background-color: var(--background-primary);
+}
+
+span.cm-underline.cm-link {
+	text-decoration: var(--link-decoration);
+}
+
+span.cm-link.cm-underline:hover {
+	text-decoration: var(--link-decoration-hover);
+}
+
+.horizontal-tab-content, 
+.vertical-tab-content {
+	background-color: var(--background-secondary);
+}
+
+.vertical-tab-content-container > div {
+	background-color: var(--background-secondary);
+}
+
+.workspace-split.mod-left-split .view-content, 
+.workspace-split.mod-right-split .view-content{
+	background-color: var(--background-primary);
+}
+
+button.mod-warning {
+	color: white;
+  background-color: var(--color-red);
+}
+
+.theme-dark .sidebar-toggle-button.mod-right,
+.theme-light .sidebar-toggle-button.mod-right {
+	background-color: var(--background-primary);
+}
+
+/* Fancy highlight inspiration from Things 2 */
+/* https://github.com/colineckert/obsidian-things/blob/main/theme.css */
+.cm-s-obsidian span.cm-formatting-highlight,
+.cm-s-obsidian span.cm-highlight {
+	background: linear-gradient(0deg, var(--highlight-background-color-underline) 0, var(--highlight-background-color-underline) 2px,var(--highlight-background-color--active) 2px, var(--highlight-background-color--active) 100%);
+	color: var(--text-normal);
+}
+.markdown-preview-view mark,
+.markdown-rendered mark {
+	background: linear-gradient(0deg, var(--highlight-background-color-underline) 0, var(--highlight-background-color-underline) 2px,var(--highlight-background-color--active) 2px, var(--highlight-background-color--active) 100%);
+	color: var(--text-normal);
+}
+
+/* Kanban settings */
+.kanban-plugin__item-title-wrapper {
+  background-color: var(--color-base-05);
+}
+.kanban-plugin__markdown-preview-view ul, .kanban-plugin__markdown-preview-view ol {
+  padding-inline-start: 32px;
+}
+.kanban-plugin__item-prefix-button-wrapper > input[type=checkbox]:checked::after {
+  mask-position: 26% 26%;
+  -webkit-mask-position: 26% 26%;
+}
+button.kanban-plugin__new-item-button {
+  gap: 3px;
+}
+
+/* Folder & file icons */
+body.theme-dark .nav-folder-title > .nav-folder-title-content::before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16'%3E%3Cpath d='M4 5V19H20V7H11.5858L9.58579 5H4ZM12.4142 5H21C21.5523 5 22 5.44772 22 6V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H10.4142L12.4142 5Z' fill='rgba(192,192,192,1)'%3E%3C/path%3E%3C/svg%3E");
+	padding: 4px;
+}
+body.theme-dark .nav-file-title > .nav-file-title-content::before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16'%3E%3Cpath d='M9 2.00318V2H19.9978C20.5513 2 21 2.45531 21 2.9918V21.0082C21 21.556 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5501 3 20.9932V8L9 2.00318ZM5.82918 8H9V4.83086L5.82918 8ZM11 4V9C11 9.55228 10.5523 10 10 10H5V20H19V4H11Z' fill='rgba(192,192,192,1)'%3E%3C/path%3E%3C/svg%3E");
+	padding: 4px;
+}
+body.theme-light .nav-folder-title > .nav-folder-title-content::before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16'%3E%3Cpath d='M4 5V19H20V7H11.5858L9.58579 5H4ZM12.4142 5H21C21.5523 5 22 5.44772 22 6V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H10.4142L12.4142 5Z' fill='rgba(116,116,116,1)'%3E%3C/path%3E%3C/svg%3E");
+	padding: 4px;
+}
+body.theme-light .nav-file-title > .nav-file-title-content::before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16'%3E%3Cpath d='M9 2.00318V2H19.9978C20.5513 2 21 2.45531 21 2.9918V21.0082C21 21.556 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5501 3 20.9932V8L9 2.00318ZM5.82918 8H9V4.83086L5.82918 8ZM11 4V9C11 9.55228 10.5523 10 10 10H5V20H19V4H11Z' fill='rgba(116,116,116,1)'%3E%3C/path%3E%3C/svg%3E");
+	padding: 4px;
+}
+
+/* Icon colors */
+body.icon-default {
+  --icon-color: var(--icon-color);
+}
+body.icon-purple {
+  --icon-color: var(--color-purple);
+}
+body.icon-yellow {
+  --icon-color: var(--color-yellow);
+}
+body.icon-pink {
+  --icon-color: var(--color-pink);
+}
+body.icon-green {
+  --icon-color: var(--color-green);
+}
+body.icon-orange {
+  --icon-color: var(--color-orange);
+}
+body.icon-blue {
+  --icon-color: var(--color-blue);
+}
+
+/* Disable heading colors */
+.heading-no-color {
+  --h1-color: var(--text-normal) !important;
+  --h2-color: var(--text-normal) !important;
+  --h3-color: var(--text-normal) !important;
+  --h4-color: var(--text-normal) !important;
+  --h5-color: var(--text-normal) !important;
+  --h6-color: var(--text-normal) !important;
+}
+
+body.hide-header-title .view-header-title-container {
+	display: none;
+}
+
+body.hide-status-bar .status-bar {
+	display: none;
+}
+
+body.highlight-active-line .markdown-source-view .cm-active.cm-line {
+	background-color: var(--color-base-05);
+	border-left: 2px solid var(--color-purple);
+}
+
+/* Syntax highlighting from https://github.com/clbn/dracula-gemini/blob/master/theme.css */
+body.theme-dark.dracula {
+	--code-background: var(--color-dracula-background);
+  --code-normal: var(--color-dracula-foreground);
+  --code-comment: var(--color-dracula-comment);
+  --code-function: var(--color-dracula-green);
+  --code-important: var(--color-dracula-red);
+  --code-keyword: var(--color-dracula-pink);
+  --code-operator: var(--color-dracula-foreground);
+  --code-property: var(--color-dracula-orange);
+  --code-punctuation: var(--text-muted);
+  --code-string: var(--color-dracula-yellow);
+  --code-tag: var(--color-dracula-red);   
+  --code-value: var(--color-dracula-purple);
+}
+
+/* Syntax highlighting from https://github.com/colineckert/obsidian-things/blob/main/theme.css */
+body.theme-dark.one-dark-dark {
+  --code-background: var(--color-dark-one-dark-background);
+  --code-comment: var(--color-dark-one-dark-gray-1);
+  --code-function: var(--color-dark-one-dark-blue);
+  --code-important: var(--color-dark-one-dark-red);
+  --code-keyword: var(--color-dark-one-dark-purple);
+  --code-operator: var(--color-dark-one-dark-aqua);
+  --code-property: var(--color-dark-one-dark-orange);
+  --code-punctuation: var(--color-dark-one-dark-gray-2);
+  --code-string: var(--color-dark-one-dark-green);
+  --code-tag: var(--color-dark-one-dark-yellow);
+  --code-value: var(--color-dark-one-dark-blue);
+}
+
+/* Syntax highlighting for Catppuccin themes from https://github.com/catppuccin/obsidian */
+body.theme-dark.catppuccin-frappe-for-dark,
+body.theme-light.catppuccin-frappe-for-light {
+  --code-background: var(--color-ctp-frappe-background);
+  --code-normal: var(--color-ctp-frappe-foreground);
+  --code-comment: var(--color-ctp-frappe-faint);
+  --code-function: var(--color-ctp-frappe-yellow);
+  --code-important: var(--color-ctp-frappe-orange);
+  --code-keyword: var(--color-ctp-frappe-pink);
+  --code-property: var(--color-ctp-frappe-cyan);
+  --code-punctuation: var(--color-ctp-frappe-muted);
+  --code-string: var(--color-ctp-frappe-green);
+  --code-tag: var(--color-ctp-frappe-red);
+  --code-value: var(--color-ctp-frappe-purple);
+}
+
+body.theme-dark.catppuccin-macchiato {
+  --code-background: var(--color-ctp-macchiato-background);
+  --code-normal: var(--color-ctp-macchiato-foreground);
+  --code-comment: var(--color-ctp-macchiato-faint);
+  --code-function: var(--color-ctp-macchiato-yellow);
+  --code-important: var(--color-ctp-macchiato-orange);
+  --code-keyword: var(--color-ctp-macchiato-pink);
+  --code-property: var(--color-ctp-macchiato-cyan);
+  --code-punctuation: var(--color-ctp-macchiato-muted);
+  --code-string: var(--color-ctp-macchiato-green);
+  --code-tag: var(--color-ctp-macchiato-red);
+  --code-value: var(--color-ctp-macchiato-purple);
+}
+
+body.theme-dark.catppuccin-mocha {
+  --code-background: var(--color-ctp-mocha-background);
+  --code-normal: var(--color-ctp-mocha-foreground);
+  --code-comment: var(--color-ctp-mocha-faint);
+  --code-function: var(--color-ctp-mocha-yellow);
+  --code-important: var(--color-ctp-mocha-orange);
+  --code-keyword: var(--color-ctp-mocha-pink);
+  --code-property: var(--color-ctp-mocha-cyan);
+  --code-punctuation: var(--color-ctp-mocha-muted);
+  --code-string: var(--color-ctp-mocha-green);
+  --code-tag: var(--color-ctp-mocha-red);
+  --code-value: var(--color-ctp-mocha-purple);
+}
+
+/* Syntax highlighting from https://github.com/dbarenholz/halcyon-obsidian/blob/master/theme.css */
+body.theme-dark.halcyon {
+  --code-background: var(--color-halcyon-background);
+  --code-normal: var(--color-halcyon-cyan);
+  --code-comment: var(--text-faint);
+  --code-function: var(--color-halcyon-yellow);
+  --code-important: var(--color-halcyon-red);
+  --code-keyword: var(--color-halcyon-purple);
+  --code-operator: var(--color-halcyon-orange);
+  --code-property: var(--text-muted);
+  --code-punctuation: var(--color-halcyon-purple);
+  --code-string: var(--color-halcyon-green);
+  --code-tag: var(--color-halcyon-grey-dark);
+  --code-value:  var(--color-halcyon-grey-dark);
+}
+
+/* Syntax highlighting for GitHub themes from https://github.com/krios2146/obsidian-theme-github/blob/master/theme.css */
+body.theme-dark.github-dark {
+  --code-background: var(--color-github-dark-background);
+  --code-normal: var(--text-muted);
+  --code-comment: var(--text-faint);
+  --code-function: var(--color-github-dark-orange);
+  --code-important: var(--color-github-dark-orange);
+  --code-keyword: var(--color-github-dark-red);
+  --code-property: var(--color-github-dark-blue);
+  --code-punctuation: var(--text-muted);
+  --code-string: var(--color-github-dark-cyan);
+  --code-tag: var(--color-github-dark-red);
+  --code-value: var(--color-github-dark-purple);
+}
+
+/* Syntax highlighting for Tokyo Night themes from https://github.com/tcmmichaelb139/obsidian-tokyonight */
+body.theme-dark.tokyo-night {
+  --code-background: var(--color-tokyo-night-background);
+  --code-normal: var(--color-tokyo-night-foreground);
+  --code-comment: var(--color-tokyo-night-faint);
+  --code-function: var(--color-tokyo-night-yellow);
+  --code-important: var(--color-tokyo-night-orange);
+  --code-keyword: var(--color-tokyo-night-purple);
+  --code-operator: var(--color-tokyo-night-red);
+  --code-property: var(--color-tokyo-night-cyan);
+  --code-punctuation: var(--text-muted);
+  --code-string: var(--color-tokyo-night-green);
+  --code-tag: var(--color-tokyo-night-red);
+  --code-value: var(--color-tokyo-night-purple);
+}
+
+/* Syntax highlighting adapted from https://material-theme.com/docs/configuration/color-schemes */
+body.theme-light.material-light {
+	--code-background: var(--color-material-background);
+  --code-normal: var(--color-material-foreground);
+  --code-comment: var(--color-material-comment);
+  --code-function: var(--color-material-green);
+  --code-important: var(--color-material-red);
+  --code-keyword: var(--color-material-pink);
+  --code-operator: var(--color-material-foreground);
+  --code-property: var(--color-material-orange);
+  --code-punctuation: var(--text-muted);
+  --code-string: var(--color-material-yellow);
+  --code-tag: var(--color-material-red);   
+  --code-value: var(--color-material-purple);
+}
+
+body.theme-light.one-dark-light {
+	--code-background: var(--color-light-one-dark-background);
+  --code-normal: var(--color-light-one-dark-gray-2);
+  --code-comment: var(--text-muted);
+  --code-function: var(--color-light-one-dark-blue);
+  --code-important: var(--color-light-one-dark-red);
+  --code-keyword: var(--color-light-one-dark-purple);
+  --code-operator: var(--color-light-one-dark-aqua);
+  --code-property: var(--color-light-one-dark-orange);
+  --code-punctuation: var(--color-light-one-dark-gray-2);
+  --code-string: var(--color-light-one-dark-green);
+  --code-tag: var(--color-light-one-dark-yellow);
+  --code-value: var(--color-light-one-dark-blue);
+}
+
+body.theme-light.catppuccin-latte {
+  --code-background: var(--color-ctp-latte-background);
+  --code-normal: var(--color-ctp-latte-foreground);
+  --code-comment: var(--color-ctp-latte-faint);
+  --code-function: var(--color-ctp-latte-yellow);
+  --code-important: var(--color-ctp-latte-orange);
+  --code-keyword: var(--color-ctp-latte-pink);
+  --code-property: var(--color-ctp-latte-cyan);
+  --code-punctuation: var(--color-ctp-latte-muted);
+  --code-string: var(--color-ctp-latte-green);
+  --code-tag: var(--color-ctp-latte-red);
+  --code-value: var(--color-ctp-latte-purple);
+}
+
+body.theme-light.github-light {
+  --code-background: var(--color-github-light-background);
+  --code-normal: var(--text-muted);
+  --code-comment: var(--text-faint);
+  --code-function: var(--color-github-light-orange);
+  --code-important: var(--color-github-light-orange);
+  --code-keyword: var(--color-github-light-red);
+  --code-property: var(--color-github-light-blue);
+  --code-punctuation: var(--text-muted);
+  --code-string: var(--color-github-light-cyan);
+  --code-tag: var(--color-github-light-red);
+  --code-value: var(--color-github-light-purple);
+}
+
+body.theme-light.tokyo-night-light {
+  --code-background: var(--color-tokyo-night-light-background);
+  --code-normal: var(--color-tokyo-night-light-foreground);
+  --code-comment: var(--color-tokyo-night-light-faint);
+  --code-function: var(--color-tokyo-night-light-yellow);
+  --code-important: var(--color-tokyo-night-light-orange);
+  --code-keyword: var(--color-tokyo-night-light-purple);
+  --code-operator: var(--color-tokyo-night-light-red);
+  --code-property: var(--color-tokyo-night-light-cyan);
+  --code-punctuation: var(--text-muted);
+  --code-string: var(--color-tokyo-night-light-green);
+  --code-tag: var(--color-tokyo-night-light-red);
+  --code-value: var(--color-tokyo-night-light-purple);
+}

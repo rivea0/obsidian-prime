@@ -1,5 +1,9 @@
 ![Prime Logo](./assets/logo.svg)
 
+![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Freleases.obsidian.md%2Fstats%2Ftheme&query=%24.Prime.download&style=for-the-badge&logo=obsidian&label=downloads&labelColor=%23131922&color=%239ca0fa)
+![GitHub manifest version](https://img.shields.io/github/manifest-json/v/rivea0/obsidian-prime?style=for-the-badge&labelColor=%23131922&color=%239cfaf6)
+![GitHub License](https://img.shields.io/github/license/rivea0/obsidian-prime?style=for-the-badge&labelColor=%23131922&color=%23fac79e)
+
 Prime is a simple theme for Obsidian that is customizable and has some neat features.
 
 ![Prime screenshot](./assets/prime-img.png)
@@ -10,7 +14,7 @@ This theme uses [Style Settings](https://github.com/mgmeyers/obsidian-style-sett
 
 You can buy me a coffee to support my work:
 
-<a href="https://www.buymeacoffee.com/rivea0"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=rivea0&button_colour=9ca0fa&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00"></a>
+<a href="https://www.buymeacoffee.com/rivea0"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=rivea0&button_colour=8c90f9&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" /></a>
 
 
 ## Installation

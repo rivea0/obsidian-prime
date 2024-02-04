@@ -63,6 +63,14 @@ cp theme.css manifest.json <path/to/your/vault>/.obsidian/themes/Prime
 
 Sometimes you want to use different themes for code blocks depending on your mood. (Right? 😐)
 
+
+
+
+https://github.com/rivea0/obsidian-prime/assets/58330360/16ada5ef-30dd-487d-98d9-c53b3985f8c3
+
+
+
+
 There are several theme options with dark and light variations. The default for the dark theme is [Dracula](https://github.com/dracula/dracula-theme), and for the light theme, an adaptation of [Material Theme Lighter](https://www.material-theme.dev).
 
 #### Dark Theme Options

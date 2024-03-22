@@ -54,6 +54,12 @@ settings:
         type: class-toggle
         default: false
     -
+        id: disable-file-and-folder-icons
+        title: Remove file and folder icons
+        description: Don't use icons for files and folders in the navigation pane
+        type: class-toggle
+        default: false
+    -
         id: hide-header-title
         title: Hide header title
         type: class-toggle
@@ -618,6 +624,16 @@ body.icon-blue {
   --h4-color: var(--text-normal) !important;
   --h5-color: var(--text-normal) !important;
   --h6-color: var(--text-normal) !important;
+}
+
+body.disable-file-and-folder-icons .nav-folder-title > .nav-folder-title-content::before {
+  content: '';
+  padding: 0;
+}
+
+body.disable-file-and-folder-icons .nav-file-title > .nav-file-title-content::before {
+  content: '';
+  padding: 0;
 }
 
 body.hide-header-title .view-header-title-container {

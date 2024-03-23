@@ -75,6 +75,259 @@ settings:
         type: class-toggle
         default: false
     -
+        id: heading-colors-header
+        title: Heading Colors
+        description: Change the color of headings
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: h1
+        title: H1
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: h1-choose-color-default
+        title: Choose a default color
+        type: class-select
+        allowEmpty: false
+        default: h1-purple
+        options:
+            -
+                label: None
+                value: h1-color-default-none
+            -
+                label: Purple
+                value: h1-purple
+            -
+                label: Blue
+                value: h1-blue
+            -
+                label: Green
+                value: h1-green
+            -
+                label: Yellow
+                value: h1-yellow
+            -
+                label: Orange
+                value: h1-orange
+            -
+                label: Pink
+                value: h1-pink
+    -
+        id: h1-color-custom
+        title: Choose a custom color
+        description: ❗️ Make sure that 'None' is selected from the 'Choose a default color' option!
+        type: variable-color
+        default: '#'
+        format: hex
+    -
+        id: h2
+        title: H2
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: h2-choose-color-default
+        title: Choose a default color
+        type: class-select
+        allowEmpty: false
+        default: h2-blue
+        options:
+            -
+                label: None
+                value: h2-color-default-none
+            -
+                label: Purple
+                value: h2-purple
+            -
+                label: Blue
+                value: h2-blue
+            -
+                label: Green
+                value: h2-green
+            -
+                label: Yellow
+                value: h2-yellow
+            -
+                label: Orange
+                value: h2-orange
+            -
+                label: Pink
+                value: h2-pink
+    -
+        id: h2-color-custom
+        title: Choose a custom color
+        description: ❗️ Make sure that 'None' is selected from the 'Choose a default color' option!
+        type: variable-color
+        default: '#'
+        format: hex
+    -
+        id: h3
+        title: H3
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: h3-choose-color-default
+        title: Choose a default color
+        type: class-select
+        allowEmpty: false
+        default: h3-green
+        options:
+            -
+                label: None
+                value: h3-color-default-none
+            -
+                label: Purple
+                value: h3-purple
+            -
+                label: Blue
+                value: h3-blue
+            -
+                label: Green
+                value: h3-green
+            -
+                label: Yellow
+                value: h3-yellow
+            -
+                label: Orange
+                value: h3-orange
+            -
+                label: Pink
+                value: h3-pink
+    -
+        id: h3-color-custom
+        title: Choose a custom color
+        description: ❗️ Make sure that 'None' is selected from the 'Choose a default color' option!
+        type: variable-color
+        default: '#'
+        format: hex
+    -
+        id: h4
+        title: H4
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: h4-choose-color-default
+        title: Choose a default color
+        type: class-select
+        allowEmpty: false
+        default: h4-yellow
+        options:
+            -
+                label: None
+                value: h4-color-default-none
+            -
+                label: Purple
+                value: h4-purple
+            -
+                label: Blue
+                value: h4-blue
+            -
+                label: Green
+                value: h4-green
+            -
+                label: Yellow
+                value: h4-yellow
+            -
+                label: Orange
+                value: h4-orange
+            -
+                label: Pink
+                value: h4-pink
+    -
+        id: h4-color-custom
+        title: Choose a custom color
+        description: ❗️ Make sure that 'None' is selected from the 'Choose a default color' option!
+        type: variable-color
+        default: '#'
+        format: hex
+    -
+        id: h5
+        title: H5
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: h5-choose-color-default
+        title: Choose a default color
+        type: class-select
+        allowEmpty: false
+        default: h5-orange
+        options:
+            -
+                label: None
+                value: h5-color-default-none
+            -
+                label: Purple
+                value: h5-purple
+            -
+                label: Blue
+                value: h5-blue
+            -
+                label: Green
+                value: h5-green
+            -
+                label: Yellow
+                value: h5-yellow
+            -
+                label: Orange
+                value: h5-orange
+            -
+                label: Pink
+                value: h5-pink
+    -
+        id: h5-color-custom
+        title: Choose a custom color
+        description: ❗️ Make sure that 'None' is selected from the 'Choose a default color' option!
+        type: variable-color
+        default: '#'
+        format: hex
+    -
+        id: h6
+        title: H6
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: h6-choose-color-default
+        title: Choose a default color
+        type: class-select
+        allowEmpty: false
+        default: h6-pink
+        options:
+            -
+                label: None
+                value: h6-color-default-none
+            -
+                label: Purple
+                value: h6-purple
+            -
+                label: Blue
+                value: h6-blue
+            -
+                label: Green
+                value: h6-green
+            -
+                label: Yellow
+                value: h6-yellow
+            -
+                label: Orange
+                value: h6-orange
+            -
+                label: Pink
+                value: h6-pink
+    -
+        id: h6-color-custom
+        title: Choose a custom color
+        description: ❗️ Make sure that 'None' is selected from the 'Choose a default color' option!
+        type: variable-color
+        default: '#'
+        format: hex
+    -
         id: syntax-highlighting-header
         title: Syntax Highlighting Options
         description: Choose a syntax highlighting theme for code blocks
@@ -616,6 +869,174 @@ body.icon-blue {
   --icon-color: var(--color-blue);
 }
 
+body.h1-color-default-none {
+  --h1-color: var(--h1-color-custom);
+}
+
+body.h1-purple {
+  --h1-color: var(--color-purple);
+}
+
+body.h1-blue {
+  --h1-color: var(--color-blue);
+}
+
+body.h1-green {
+  --h1-color: var(--color-green);
+}
+
+body.h1-yellow {
+  --h1-color: var(--color-yellow);
+}
+
+body.h1-orange {
+  --h1-color: var(--color-orange);
+}
+
+body.h1-pink {
+  --h1-color: var(--color-pink);
+}
+
+body.h2-color-default-none {
+  --h2-color: var(--h2-color-custom);
+}
+
+body.h2-purple {
+  --h2-color: var(--color-purple);
+}
+
+body.h2-blue {
+  --h2-color: var(--color-blue);
+}
+
+body.h2-green {
+  --h2-color: var(--color-green);
+}
+
+body.h2-yellow {
+  --h2-color: var(--color-yellow);
+}
+
+body.h2-orange {
+  --h2-color: var(--color-orange);
+}
+
+body.h2-pink {
+  --h2-color: var(--color-pink);
+}
+
+body.h3-color-default-none {
+  --h3-color: var(--h3-color-custom);
+}
+
+body.h3-purple {
+  --h3-color: var(--color-purple);
+}
+
+body.h3-blue {
+  --h3-color: var(--color-blue);
+}
+
+body.h3-green {
+  --h3-color: var(--color-green);
+}
+
+body.h3-yellow {
+  --h3-color: var(--color-yellow);
+}
+
+body.h3-orange {
+  --h3-color: var(--color-orange);
+}
+
+body.h3-pink {
+  --h3-color: var(--color-pink);
+}
+
+body.h4-color-default-none {
+  --h4-color: var(--h4-color-custom);
+}
+
+body.h4-purple {
+  --h4-color: var(--color-purple);
+}
+
+body.h4-blue {
+  --h4-color: var(--color-blue);
+}
+
+body.h4-green {
+  --h4-color: var(--color-green);
+}
+
+body.h4-yellow {
+  --h4-color: var(--color-yellow);
+}
+
+body.h4-orange {
+  --h4-color: var(--color-orange);
+}
+
+body.h4-pink {
+  --h4-color: var(--color-pink);
+}
+
+body.h5-color-default-none {
+  --h5-color: var(--h5-color-custom);
+}
+
+body.h5-purple {
+  --h5-color: var(--color-purple);
+}
+
+body.h5-blue {
+  --h5-color: var(--color-blue);
+}
+
+body.h5-green {
+  --h5-color: var(--color-green);
+}
+
+body.h5-yellow {
+  --h5-color: var(--color-yellow);
+}
+
+body.h5-orange {
+  --h5-color: var(--color-orange);
+}
+
+body.h5-pink {
+  --h5-color: var(--color-pink);
+}
+
+body.h6-color-default-none {
+  --h6-color: var(--h6-color-custom);
+}
+
+body.h6-purple {
+  --h6-color: var(--color-purple);
+}
+
+body.h6-blue {
+  --h6-color: var(--color-blue);
+}
+
+body.h6-green {
+  --h6-color: var(--color-green);
+}
+
+body.h6-yellow {
+  --h6-color: var(--color-yellow);
+}
+
+body.h6-orange {
+  --h6-color: var(--color-orange);
+}
+
+body.h6-pink {
+  --h6-color: var(--color-pink);
+}
+
 /* Disable heading colors */
 .heading-no-color {
   --h1-color: var(--text-normal) !important;
@@ -843,4 +1264,8 @@ body.theme-light.tokyo-night-light {
   --code-string: var(--color-tokyo-night-light-green);
   --code-tag: var(--color-tokyo-night-light-red);
   --code-value: var(--color-tokyo-night-light-purple);
+}
+
+.setting-item[data-id=heading-colors-header] + .style-settings-container {
+  padding-left: 12px;
 }

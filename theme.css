@@ -328,6 +328,154 @@ settings:
         default: '#'
         format: hex
     -
+        id: text-decoration-colors-header
+        title: Text Decoration Colors
+        description: Change the colors of bold, italic, and highlighted text
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: bold
+        title: Bold text
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: bold-choose-color-default
+        title: Choose a default color
+        type: class-select
+        allowEmpty: false
+        default: bold-color-default-none
+        options:
+            -
+                label: None
+                value: bold-color-default-none
+            -
+                label: Purple
+                value: bold-purple
+            -
+                label: Blue
+                value: bold-blue
+            -
+                label: Green
+                value: bold-green
+            -
+                label: Yellow
+                value: bold-yellow
+            -
+                label: Orange
+                value: bold-orange
+            -
+                label: Pink
+                value: bold-pink
+    -
+        id: bold-color-custom
+        title: Choose a custom color
+        description: ❗️ Make sure that 'None' is selected from the 'Choose a default color' option!
+        type: variable-color
+        default: '#'
+        format: hex
+    -
+        id: italic
+        title: Italic text
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: italic-choose-color-default
+        title: Choose a default color
+        type: class-select
+        allowEmpty: false
+        default: italic-color-default-none
+        options:
+            -
+                label: None
+                value: italic-color-default-none
+            -
+                label: Purple
+                value: italic-purple
+            -
+                label: Blue
+                value: italic-blue
+            -
+                label: Green
+                value: italic-green
+            -
+                label: Yellow
+                value: italic-yellow
+            -
+                label: Orange
+                value: italic-orange
+            -
+                label: Pink
+                value: italic-pink
+    -
+        id: italic-color-custom
+        title: Choose a custom color
+        description: ❗️ Make sure that 'None' is selected from the 'Choose a default color' option!
+        type: variable-color
+        default: '#'
+        format: hex
+    -
+        id: highlighted-text
+        title: Highlighted text
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: highlight-choose-color-default
+        title: Choose a background color
+        description: ❗️ Make sure that 'Custom colors' is disabled.
+        type: class-select
+        allowEmpty: false
+        default: highlight-color-default-none
+        options:
+            -
+                label: Default
+                value: highlight-color-default-none
+            -
+                label: Purple
+                value: highlight-bg-purple
+            -
+                label: Blue
+                value: highlight-bg-blue
+            -
+                label: Green
+                value: highlight-bg-green
+            -
+                label: Yellow
+                value: highlight-bg-yellow
+            -
+                label: Orange
+                value: highlight-bg-orange
+            -
+                label: Pink
+                value: highlight-bg-pink
+    -
+        id: highlighted-text-custom
+        title: Custom colors
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: highlight-enable-color-custom
+        title: Enable custom colors
+        description: Choose your own colors for highlighted text
+        type: class-toggle
+        default: false
+    -
+        id: highlight-color-custom-bg
+        title: Background color
+        type: variable-color
+        default: '#'
+        format: hex
+    -
+        id: highlight-color-custom-text
+        title: Text color
+        type: variable-color
+        default: '#'
+        format: hex
+    -
         id: syntax-highlighting-header
         title: Syntax Highlighting Options
         description: Choose a syntax highlighting theme for code blocks
@@ -697,6 +845,13 @@ body.theme-dark {
   --highlight-background-color--active: rgba(250, 246, 156, .1);
   --highlight-background-color--active-dark: rgb(238, 232, 169, .1);
 
+  --highlight-bg-purple: rgba(156, 160, 250, .45);
+  --highlight-bg-blue: rgba(156, 250, 246, .45);
+  --highlight-bg-green: rgba(156, 250, 199, .45);
+  --highlight-bg-yellow: rgba(250, 246, 156, .45);
+  --highlight-bg-orange: rgba(250, 199, 158, .45);
+  --highlight-bg-pink: rgba(250, 156, 207, .45);
+
   --tab-background-active: var(--color-base-10);
 
   --blockquote-background-color: var(--color-base-10);
@@ -735,6 +890,13 @@ body.theme-light {
   --highlight-background-color-underline: #ffd500;
   --highlight-background-color--active: rgba(250, 246, 156, .2);
   --highlight-background-color--active-dark: rgb(238, 232, 169, .1);
+
+  --highlight-bg-purple: rgba(140, 144, 249, .45);
+  --highlight-bg-blue: rgba(11, 208, 200, .45);
+  --highlight-bg-green: rgba(11, 208, 101, .45);
+  --highlight-bg-yellow: rgba(192, 185, 10, .45);
+  --highlight-bg-orange: rgba(243, 124, 29, .45);
+  --highlight-bg-pink: rgba(250, 156, 207, .45);
 
   --tab-background-active: var(--color-base-05);
 
@@ -788,8 +950,8 @@ button.mod-warning {
 
 /* Fancy highlight inspiration from Things 2 */
 /* https://github.com/colineckert/obsidian-things/blob/main/theme.css */
-.cm-s-obsidian span.cm-formatting-highlight,
-.cm-s-obsidian span.cm-highlight {
+.highlight-color-default-none .cm-s-obsidian span.cm-formatting-highlight,
+.highlight-color-default-none .cm-s-obsidian span.cm-highlight {
   background: linear-gradient(0deg, var(--highlight-background-color-underline) 0, var(--highlight-background-color-underline) 2px, var(--highlight-background-color--active) 2px, var(--highlight-background-color--active) 100%);
   color: var(--text-normal);
 }
@@ -1037,6 +1199,99 @@ body.h6-pink {
   --h6-color: var(--color-pink);
 }
 
+body.bold-color-default-none {
+  --bold-color: var(--bold-color-custom);
+}
+
+body.bold-purple {
+  --bold-color: var(--color-purple);
+}
+
+body.bold-blue {
+  --bold-color: var(--color-blue);
+}
+
+body.bold-green {
+  --bold-color: var(--color-green);
+}
+
+body.bold-yellow {
+  --bold-color: var(--color-yellow);
+}
+
+body.bold-orange {
+  --bold-color: var(--color-orange);
+}
+
+body.bold-pink {
+  --bold-color: var(--color-pink);
+}
+
+body.italic-color-default-none {
+  --italic-color: var(--italic-color-custom);
+}
+
+body.italic-purple {
+  --italic-color: var(--color-purple);
+}
+
+body.italic-blue {
+  --italic-color: var(--color-blue);
+}
+
+body.italic-green {
+  --italic-color: var(--color-green);
+}
+
+body.italic-yellow {
+  --italic-color: var(--color-yellow);
+}
+
+body.italic-orange {
+  --italic-color: var(--color-orange);
+}
+
+body.italic-pink {
+  --italic-color: var(--color-pink);
+}
+
+body.highlight-enable-color-custom .cm-s-obsidian span.cm-formatting-highlight,
+body.highlight-enable-color-custom .cm-s-obsidian span.cm-highlight {
+  background: var(--highlight-color-custom-bg);
+  color: var(--highlight-color-custom-text);
+}
+
+body.highlight-bg-purple .cm-s-obsidian span.cm-formatting-highlight,
+body.highlight-bg-purple .cm-s-obsidian span.cm-highlight {
+  --text-highlight-bg: var(--highlight-bg-purple);
+}
+
+body.highlight-bg-blue .cm-s-obsidian span.cm-formatting-highlight,
+body.highlight-bg-blue .cm-s-obsidian span.cm-highlight {
+  --text-highlight-bg: var(--highlight-bg-blue);
+}
+
+body.highlight-bg-green .cm-s-obsidian span.cm-formatting-highlight,
+body.highlight-bg-green .cm-s-obsidian span.cm-highlight {
+  --text-highlight-bg: var(--highlight-bg-green);
+}
+
+body.highlight-bg-yellow .cm-s-obsidian span.cm-formatting-highlight,
+body.highlight-bg-yellow .cm-s-obsidian span.cm-highlight {
+  --text-highlight-bg: var(--highlight-bg-yellow);
+}
+
+body.highlight-bg-orange .cm-s-obsidian span.cm-formatting-highlight,
+body.highlight-bg-orange .cm-s-obsidian span.cm-highlight {
+  --text-highlight-bg: var(--highlight-bg-orange);
+}
+
+body.highlight-bg-pink .cm-s-obsidian span.cm-formatting-highlight,
+body.highlight-bg-pink .cm-s-obsidian span.cm-highlight {
+  --text-highlight-bg: var(--highlight-bg-pink);
+}
+
+
 /* Disable heading colors */
 .heading-no-color {
   --h1-color: var(--text-normal) !important;
@@ -1266,6 +1521,8 @@ body.theme-light.tokyo-night-light {
   --code-value: var(--color-tokyo-night-light-purple);
 }
 
-.setting-item[data-id=heading-colors-header] + .style-settings-container {
+.setting-item[data-id=heading-colors-header] + .style-settings-container,
+.setting-item[data-id=text-decoration-colors-header] + .style-settings-container,
+.setting-item[data-id=highlighted-text-custom] + .style-settings-container {
   padding-left: 12px;
 }

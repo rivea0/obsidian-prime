@@ -8,7 +8,7 @@ Prime is a simple theme for Obsidian that is customizable and has some neat feat
 
 ![Prime screenshot](./assets/prime-img.png)
 
-The motivation behind creating this theme is that I wanted a simple theme that only adds some color tweaks instead of introducing huge changes that modify the positioning of elements, font styles, etc. It started as an experiment, and I added some features that I'd like to use, such as syntax highlighting themes for code blocks, emojis as callout icons, and gradient frames (inspired by [Anuppuccin's Colorful Frames](https://github.com/AnubisNekhet/anuppuccin#colorful-frames) — which is adapted from the [Minimal theme](https://github.com/kepano/obsidian-minimal).)
+The motivation behind creating this theme was that I wanted a simple theme that only adds some color tweaks instead of introducing huge changes that modify the positioning of elements, font styles, etc. It started as an experiment, and I added some features that I'd like to use, such as syntax highlighting themes for code blocks, emojis as callout icons, and gradient frames (inspired by [Anuppuccin's Colorful Frames](https://github.com/AnubisNekhet/anuppuccin#colorful-frames) — which is adapted from the [Minimal theme](https://github.com/kepano/obsidian-minimal).)
 
 This theme uses [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) for easier customization.
 
@@ -16,6 +16,13 @@ You can buy me a coffee to support my work:
 
 <a href="https://www.buymeacoffee.com/rivea0"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=rivea0&button_colour=8c90f9&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" /></a>
 
+## Screenshots
+
+![Prime Overview 1 Dark Theme](./assets/prime-overview-1-dark.png)
+![Prime Overview 1 Light Theme](./assets/prime-overview-2-dark.png)
+
+![Prime Overview 2 Dark Theme](./assets/prime-overview-1-light.png)
+![Prime Overview 2 Light Theme](./assets/prime-overview-2-light.png)
 
 ## Installation
 
@@ -48,14 +55,6 @@ cp theme.css manifest.json <path/to/your/vault>/.obsidian/themes/Prime
 ```
 
 4. Choose Prime from the **Themes** section under **Appearance** in Obsidian Settings 🎉
-
-## Screenshots
-
-![Prime Overview 1 Dark Theme](./assets/prime-overview-1-dark.png)
-![Prime Overview 1 Light Theme](./assets/prime-overview-2-dark.png)
-
-![Prime Overview 2 Dark Theme](./assets/prime-overview-1-light.png)
-![Prime Overview 2 Light Theme](./assets/prime-overview-2-light.png)
 
 ## Features
 

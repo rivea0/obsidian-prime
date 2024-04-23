@@ -541,6 +541,23 @@ settings:
                 label: Tokyo Night Light
                 value: tokyo-night-light
     -
+        id: tweaks-header
+        title: Tweaks
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: blockquote-italic
+        title: Use italic font for blockquotes in edit mode
+        type: class-toggle
+        default: false
+    -
+        id: green-alternative-color
+        title: Use alternative color for green in dark mode
+        description: Default green color may be indistinguishable from blue in dark mode
+        type: class-toggle
+        default: false
+    -
       id: callout-emojis-heading
       title: Callouts with Emoji Support ✨
       type: heading
@@ -1302,6 +1319,10 @@ body.highlight-bg-pink .cm-s-obsidian span.cm-highlight {
   --h6-color: var(--text-normal) !important;
 }
 
+body.blockquote-italic {
+  --blockquote-style: italic;
+}
+
 body.disable-file-and-folder-icons .nav-folder-title > .nav-folder-title-content::before {
   content: '';
   padding: 0;
@@ -1519,6 +1540,10 @@ body.theme-light.tokyo-night-light {
   --code-string: var(--color-tokyo-night-light-green);
   --code-tag: var(--color-tokyo-night-light-red);
   --code-value: var(--color-tokyo-night-light-purple);
+}
+
+body.theme-dark.green-alternative-color {
+  --color-green: #a0fa9c;
 }
 
 .setting-item[data-id=heading-colors-header] + .style-settings-container,

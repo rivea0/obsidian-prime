@@ -159,7 +159,7 @@ There are several theme options with dark and light variations. The default for 
 - [<] scheduling
 ```
 
-<img src="./assets/custom-checkboxes-1.png" width="33%" />
+<img src="./assets/custom-checkboxes-1.png" width="40%" />
 
 #### Extras 2
 
@@ -185,7 +185,7 @@ There are several theme options with dark and light variations. The default for 
 - [M] merged pull request
 ```
 
-<img src="./assets/custom-checkboxes-2.png" width="33%" />
+<img src="./assets/custom-checkboxes-2.png" width="40%" />
 
 #### Extras 3
 
@@ -202,7 +202,7 @@ There are several theme options with dark and light variations. The default for 
 - [n] negative
 ```
 
-<img src="./assets/custom-checkboxes-3.png" width="33%" />
+<img src="./assets/custom-checkboxes-3.png" width="40%" />
 
 
 ### Snippets

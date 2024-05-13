@@ -146,6 +146,64 @@ There are several theme options with dark and light variations. The default for 
     <img src="./assets/prime-syntax-highlighting/light-tokyo-night-light.png" />
 </details>
 
+### Custom Checkbox Styling
+
+#### Basic
+
+```
+- [ ] to do
+- [/] incomplete
+- [x] done
+- [-] cancelled
+- [>] forwarded
+- [<] scheduling
+```
+
+<img src="./assets/custom-checkboxes-1.png" width="33%" />
+
+#### Extras 2
+
+```
+- [?] question
+- [!] important
+- [*] star
+- ["] quote
+- [l] location
+- [b] bookmark
+- [i] information
+- [S] savings
+- [I] idea
+- [p] pros
+- [c] cons
+- [f] fire
+- [k] key
+- [w] win
+- [u] up
+- [d] down
+- [D] draft pull request
+- [P] open pull request
+- [M] merged pull request
+```
+
+<img src="./assets/custom-checkboxes-2.png" width="33%" />
+
+#### Extras 3
+
+```
+- [m] mail
+- [h] heart
+- [a] archive
+- [e] eye
+- [s] search
+- [r] rocket
+- [8] infinity
+- [g] goal
+- [+] positive
+- [n] negative
+```
+
+<img src="./assets/custom-checkboxes-3.png" width="33%" />
+
 
 ### Snippets
 
@@ -230,7 +288,8 @@ _You can [buy @AnubisNekhet a coffee](https://www.buymeacoffee.com/anubisnekhet)
 
 _You can [buy @kepano a coffee](https://www.buymeacoffee.com/kepano)._
 
-- Fancy highlighting is adapted from the [Things](https://github.com/colineckert/obsidian-things) theme. The syntax colors for the One Dark theme are also from Things.
+- Fancy highlighting is adapted from the [Things](https://github.com/colineckert/obsidian-things) theme. The syntax colors for the One Dark theme, and custom checkbox styling are also mainly from Things.
+- Custom checkbox styling is credited to the Minimal Theme.
 
 _You can buy [@colineckert (creator of the Things theme) a coffee](https://www.buymeacoffee.com/colineckert)._
 

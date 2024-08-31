@@ -541,6 +541,45 @@ settings:
                 label: Tokyo Night Light
                 value: tokyo-night-light
     -
+        id: accent-color-header
+        title: Interactive Accent Color
+        description: Change the background color for accented interactive elements
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: accent-color
+        title: Accent color
+        description: Change the accent color
+        type: class-select
+        allowEmpty: false
+        default: accent-default
+        options:
+            -
+                label: Purple
+                value: accent-default
+            -
+                label: Yellow
+                value: accent-yellow
+            -
+                label: Pink
+                value: accent-pink
+            -
+                label: Green
+                value: accent-green
+            -
+                label: Orange
+                value: accent-orange
+            -
+                label: Blue
+                value: accent-blue
+    -
+        id: preserve-link-color-on-accent-change
+        title: Use the default color for links
+        description: Keep the default purple color for links when changing the accent color
+        type: class-toggle
+        default: true
+    -
         id: tweaks-header
         title: Tweaks
         type: heading
@@ -767,8 +806,8 @@ body {
   --text-on-accent: var(--color-base-00);
   --color-accent: var(--color-purple);
   --interactive-normal: var(--color-base-20);
-  --interactive-accent: var(--color-purple) !important;
-  --interactive-accent-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.95);
+  --interactive-accent: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.90) !important;
+  --interactive-accent-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.95) !important;
   --text-accent-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.9);
 
   --h1-color: var(--color-purple);
@@ -779,7 +818,7 @@ body {
   --h6-color: var(--color-pink);
 
   --text-selection: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.4);
-  --text-accent: var(--color-purple);
+  --text-accent: var(--color-purple) !important;
 
   --ribbon-background: var(--color-base-00);
   --tab-container-background: var(--color-base-00);
@@ -795,8 +834,10 @@ body {
   --tab-container-background: var(--color-base-10);
   --tab-outline-color: var(--color-base-10);
 
-  --link-color-hover: var(--color-purple);
-  --link-external-color-hover: var(--color-purple);
+  --link-color: var(--color-purple);
+  --link-external-color: var(--color-purple);
+  --link-color-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.9);
+  --link-external-color-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.9);
   --link-external-decoration: none;
   --link-external-decoration-hover: underline;
 
@@ -900,10 +941,6 @@ body.theme-light {
   --color-blue: #0bd0c8;
   --color-purple: #8c90f9;
   --color-pink: #fa9ccf;
-
-  --accent-h: 237.45;
-  --accent-s: 90%;
-  --accent-l: 80%;
 
   --text-normal: #0d1117;
   --text-muted: #747474;
@@ -1052,6 +1089,126 @@ body.icon-orange {
 
 body.icon-blue {
   --icon-color: var(--color-blue);
+}
+
+body.theme-dark.accent-default {
+  --accent-h: 237.45;
+  --accent-s: 90%;
+  --accent-l: 80%;
+  --interactive-accent: var(--color-purple) !important;
+  --interactive-accent-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.85) !important;
+  --link-color: var(--color-purple);
+  --link-external-color: var(--color-purple);
+}
+
+body.theme-dark.accent-yellow {
+  --accent-h: 57.45;
+  --accent-s: 90%;
+  --accent-l: 80%;
+  --interactive-accent: var(--color-yellow) !important;
+  --interactive-accent-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.85) !important;
+  --link-color: var(--color-yellow);
+  --link-external-color: var(--color-yellow);
+}
+
+body.theme-dark.accent-pink {
+  --accent-h: 327.45;
+  --accent-s: 90%;
+  --accent-l: 80%;
+  --interactive-accent: var(--color-pink) !important;
+  --interactive-accent-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.85) !important;
+  --link-color: var(--color-pink);
+  --link-external-color: var(--color-pink);
+}
+
+body.theme-dark.accent-green {
+  --accent-h: 147.45;
+  --accent-s: 90%;
+  --accent-l: 80%;
+  --interactive-accent: var(--color-green) !important;
+  --interactive-accent-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.85) !important;
+  --link-color: var(--color-green);
+  --link-external-color: var(--color-green);
+}
+
+body.theme-dark.accent-orange {
+  --accent-h: 26.74;
+  --accent-s: 90%;
+  --accent-l: 80%;
+  --interactive-accent: var(--color-orange) !important;
+  --interactive-accent-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.85) !important;
+  --link-color: var(--color-orange);
+  --link-external-color: var(--color-orange);
+}
+
+body.theme-dark.accent-blue {
+  --accent-h: 177.45;
+  --accent-s: 90%;
+  --accent-l: 80%;
+  --interactive-accent: var(--color-blue) !important;
+  --interactive-accent-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.85) !important;
+  --link-color: var(--color-blue);
+  --link-external-color: var(--color-blue);
+}
+
+body.theme-light.accent-default {
+  --accent-h: 237.80;
+  --accent-s: 90%;
+  --accent-l: 76%;
+  --interactive-accent: var(--color-purple) !important;
+  --interactive-accent-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.85) !important;
+  --link-color: var(--color-purple);
+  --link-external-color: var(--color-purple);
+}
+
+body.theme-light.accent-yellow {
+  --accent-h: 57.45;
+  --accent-s: 90%;
+  --accent-l: 40%;
+  --interactive-accent: var(--color-yellow) !important;
+  --interactive-accent-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.85) !important;
+  --link-color: var(--color-yellow);
+  --link-external-color: var(--color-yellow);
+}
+
+body.theme-light.accent-pink {
+  --accent-h: 327.45;
+  --accent-s: 90%;
+  --accent-l: 40%;
+  --interactive-accent: var(--color-pink) !important;
+  --interactive-accent-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.45) !important;
+  --link-color: var(--color-pink);
+  --link-external-color: var(--color-pink);
+}
+
+body.theme-light.accent-green {
+  --accent-h: 147.45;
+  --accent-s: 90%;
+  --accent-l: 40%;
+  --interactive-accent: var(--color-green) !important;
+  --interactive-accent-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.80) !important;
+  --link-color: var(--color-green);
+  --link-external-color: var(--color-green);
+}
+
+body.theme-light.accent-orange {
+  --accent-h: 26.74;
+  --accent-s: 90%;
+  --accent-l: 50%;
+  --interactive-accent: var(--color-orange) !important;
+  --interactive-accent-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.80) !important;
+  --link-color: var(--color-orange);
+  --link-external-color: var(--color-orange);
+}
+
+body.theme-light.accent-blue {
+  --accent-h: 177.45;
+  --accent-s: 90%;
+  --accent-l: 40%;
+  --interactive-accent: var(--color-blue) !important;
+  --interactive-accent-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.85) !important;
+  --link-color: var(--color-blue);
+  --link-external-color: var(--color-blue);
 }
 
 body.h1-color-default-none {
@@ -1323,6 +1480,16 @@ body.highlight-bg-pink .cm-s-obsidian span.cm-highlight {
   --h4-color: var(--text-normal) !important;
   --h5-color: var(--text-normal) !important;
   --h6-color: var(--text-normal) !important;
+}
+
+.preserve-link-color-on-accent-change {
+  --accent-default-h: 237.45 !important;
+  --accent-default-s: 90% !important;
+  --accent-default-l: 80% !important;
+  --link-color: var(--color-purple) !important;
+  --link-external-color: var(--color-purple) !important;
+  --link-color-hover: hsla(var(--accent-default-h), var(--accent-default-s), var(--accent-default-l), 0.9);
+  --link-external-color-hover: hsla(var(--accent-default-h), var(--accent-default-s), var(--accent-default-l), 0.9);
 }
 
 /* Scroll bars */

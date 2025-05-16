@@ -12,10 +12,6 @@ The motivation behind creating this theme was that I wanted a simple theme that 
 
 This theme uses [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) for easier customization.
 
-You can buy me a coffee to support my work:
-
-<a href="https://www.buymeacoffee.com/rivea0"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=rivea0&button_colour=8c90f9&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" /></a>
-
 ## Screenshots
 
 ![Prime Overview 1 Dark Theme](./assets/prime-overview-1-dark.png)

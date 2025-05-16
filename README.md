@@ -1,7 +1,7 @@
 ![Prime Logo](./assets/logo.svg)
 
 ![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Freleases.obsidian.md%2Fstats%2Ftheme&query=%24.Prime.download&style=for-the-badge&logo=obsidian&label=downloads&labelColor=%23131922&color=%239ca0fa)
-![GitHub manifest version](https://img.shields.io/github/manifest-json/v/rivea0/obsidian-prime?style=for-the-badge&labelColor=%23131922&color=%239cfaf6)
+![GitHub release version](https://img.shields.io/github/v/release/rivea0/obsidian-prime?style=for-the-badge&labelColor=%23131922&color=%239cfaf6)
 ![GitHub License](https://img.shields.io/github/license/rivea0/obsidian-prime?style=for-the-badge&labelColor=%23131922&color=%23fac79e)
 
 Prime is a simple theme for Obsidian that is customizable and has some neat features.
